@@ -4,11 +4,32 @@
 
 (add-hook 'emacs-startup-hook 'org-agenda-list)
 
+<<<<<<< HEAD
+(let ((mono-spaced-font "Fira Code Medium")
+      (proportionately-spaced-font "Sans"))
+  (set-face-attribute 'default nil :family mono-spaced-font :height 100)
+  (set-face-attribute 'fixed-pitch nil :family mono-spaced-font :height 1.0)
+  (set-face-attribute 'variable-pitch nil :family proportionately-spaced-font :height 1.0))
+
+(setq exec-path (cons "C:/Program Files/Git/git-cmd.exe" exec-path))
+
+=======
+>>>>>>> bb6c8f3a004bee4010eee02a9ac2985d528fa053
 (use-package modus-themes
   :ensure t
   :config
   (load-theme 'modus-vivendi-tinted :no-confirm-loading))
 
+<<<<<<< HEAD
+(setq user-full-name (getenv "USER_FULL_NAME")
+      user-mail-address (getenv "USER_MAIL_ADDRESS"))
+
+(use-package ligature
+  :ensure t
+  :config
+  (ligature-set-ligatures 'prog-mode '("fi" "fl" "ffi" "ffl" "->>" "<-<" "==>" "<==" "::" ":::" "..." "++" "--" "***" "===" "!=" "!==" "!==" "<>" "<=" ">=" "==" "->" "<-" "=>" "=<" ">-" "<|" "|>" "/=" "||" "&&" "**" "|||" "&&&" "##" "#{" "#[" "##{" "##[" "///" "\\\\" "~~" "~-" "-~" ":::" ":=" "=:" ))
+  (global-ligature-mode t))
+=======
 (setq user-full-name "William J. O'Brien"
       user-mail-address "william.obrien@va.gov")
 
@@ -17,12 +38,17 @@
   (set-face-attribute 'default nil :family mono-spaced-font :height 100)
   (set-face-attribute 'fixed-pitch nil :family mono-spaced-font :height 1.0)
   (set-face-attribute 'variable-pitch nil :family proportionately-spaced-font :height 1.0))
+>>>>>>> bb6c8f3a004bee4010eee02a9ac2985d528fa053
 
 (use-package ess
   :ensure t
   :init (require 'ess-site)
   :config
+<<<<<<< HEAD
+  (setq inferior-ess-r-program "C:/users/WObrien8/AppData/Local/Programs/R/R-4.5.1/bin/x64/Rterm.exe")
+=======
   (setq inferior-ess-r-program "C:/Users/VHASLCObrieW1/AppData/Local/Programs/R/R-4.4.1/bin/x64/Rterm.exe")
+>>>>>>> bb6c8f3a004bee4010eee02a9ac2985d528fa053
   (setq ess-help-own-frame nil)
   (setq ess-style 'RStudio)
   (setq inferior-ess-r-help-command "help(\"%s\", help_type = \"text\")\n"))
@@ -46,6 +72,12 @@
   (setq org-directory (expand-file-name "~/org/"))
   (setq org-imenu-depth 7)
   (setq org-duration-format 'h:mm)
+<<<<<<< HEAD
+  (setq org-confirm-babel-evaluate nil)
+  (setq org-todo-keywords
+	'((sequence "TODO" "DONE" "WAITING")))
+=======
+>>>>>>> bb6c8f3a004bee4010eee02a9ac2985d528fa053
   (add-to-list 'safe-local-variable-values '(org-hide-leading-stars . t))
   (add-to-list 'safe-local-variable-values '(org-hide-macro-markers . t))
   :bind
@@ -202,6 +234,27 @@
   (setq trashed-sort-key '("Date deleted" . t))
   (setq trashed-date-format "%Y-%m-%d %H:%M:%S"))
 
+<<<<<<< HEAD
+(use-package org-roam
+  :ensure t
+  :custom
+  (org-roam-directory (file-truename "~/org-roam"))
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n g" . org-roam-graph)
+         ("C-c n i" . org-roam-node-insert)
+         ("C-c n c" . org-roam-capture)
+         ;; Dailies
+         ("C-c n j" . org-roam-dailies-capture-today))
+  :config
+  ;; If you're using a vertical completion framework, you might want a more informative completion interface
+  (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
+  (org-roam-db-autosync-mode)
+  ;; If using org-roam-protocol
+  (require 'org-roam-protocol))
+
+=======
+>>>>>>> bb6c8f3a004bee4010eee02a9ac2985d528fa053
 (use-package multiple-cursors
   :ensure t
   :bind (:map global-map
@@ -209,3 +262,27 @@
 	      ("C->" . mc/mark-next-like-this)
 	      ("C-<" . mc/mark-previous-like-this)
 	      ("C-c C-<" . 'mc/mark-all-like-this)))
+<<<<<<< HEAD
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-files nil)
+ '(package-selected-packages
+   '(cider company corfu dired-subtree ess fira-code-mode ligature magit
+	   marginalia modus-themes multiple-cursors
+	   nerd-icons-completion nerd-icons-corfu nerd-icons-dired
+	   olivetti orderless org-bullets org-ref org-roam transient
+	   trashed vertico)))
+
+
+(put 'downcase-region 'disabled nil)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+=======
+>>>>>>> bb6c8f3a004bee4010eee02a9ac2985d528fa053
